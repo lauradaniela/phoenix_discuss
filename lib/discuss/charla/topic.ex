@@ -10,7 +10,7 @@ defmodule Discuss.Charla.Topic do
   end
 
   @doc false
-  def changeset(topic, attrs) do
+  def changeset(topic, attrs \\ %{}) do
     topic
     |> cast(attrs, [:title])
     |> validate_required([:title])

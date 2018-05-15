@@ -49,7 +49,7 @@ defmodule Discuss.Charla do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_topic(attrs \\ %{}) do
+  def create_topic!(attrs \\ %{}) do
     %Topic{}
     |> Topic.changeset(attrs)
     |> Repo.insert()
@@ -86,7 +86,7 @@ defmodule Discuss.Charla do
 
   """
   def delete_topic(%Topic{} = topic) do
-    Repo.delete(topic)
+    Repo.delete!(topic)
   end
 
   @doc """

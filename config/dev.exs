@@ -55,4 +55,5 @@ config :discuss, Discuss.Repo,
   password: "postgres",
   database: "discuss_dev",
   hostname: "db",
-  pool_size: 10
+  pool_size: 10,
+  port: "5432"
